@@ -74,6 +74,7 @@ with open(FNAME, "w+", encoding="utf-8") as f:
         ]
         print("You missed this:")
         for arcticle in new_articles:
+            data[keyword].append(arcticle)
             print(arcticle[0] + " - " + arcticle[1])
     f.truncate(0)
     json.dump(data, f, ensure_ascii=False, indent=4)
